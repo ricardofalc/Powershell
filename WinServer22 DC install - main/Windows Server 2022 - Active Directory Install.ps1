@@ -1,15 +1,4 @@
 
-#--------------------------------------------------------------------------
-#- Created by:             David Rodriguez                                -
-#- Blog:                   www.sysadmintutorials.com                      -
-#- Twitter:                @systutorials                                  -
-#- Youtube:                https://www.youtube.com/user/sysadmintutorials -
-#- Version:                2.0                                            -
-#--------------------------------------------------------------------------
-# Change Log                                                              -
-# 4th May 2020             Initial Script for Windows Server 2019         -
-# 28th January 2022        Updated Script for Windows Server 2022         -
-#--------------------------------------------------------------------------
 
 #-------------
 #- Variables -                                         -

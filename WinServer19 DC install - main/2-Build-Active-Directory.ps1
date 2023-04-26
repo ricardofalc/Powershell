@@ -1,9 +1,4 @@
-﻿#--------------------------------------------------------------------------
-#- Created by:             David Rodriguez                                -
-#- Blog:                   www.sysadmintutorials.com                      -
-#- Twitter:                @systutorials                                  -
-#- Youtube:                https://www.youtube.com/user/sysadmintutorials -
-#--------------------------------------------------------------------------
+﻿
 
 #-------------
 #- Variables -                                         -
