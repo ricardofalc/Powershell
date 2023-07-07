@@ -1,4 +1,4 @@
-$LockscreenPath = "C:\Users\$env:username\PCV Resources\Office - Templates\Lockscreen image\PCV Lock Screen Logo.jpg"
+$LockscreenPath = "C:\Users\$env:username\path\Lock Screen Logo.jpg"
 #Kijk of de registerwaarde bestaat
 $testReg = Test-Path -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\PersonalizationCSP" -WarningAction:continue
 
