@@ -1,0 +1,29 @@
+# Export path
+$exportPath = "C:\temp\Resources.csv"
+
+# Get all resources (Room Mailboxes and Equipment Mailboxes)
+$Resources = Get-Mailbox | Where-Object { $_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "EquipmentMailbox" }
+
+# Initialize an array to store the results
+$Result = @()
+
+foreach ($Resource in $Resources) {
+    $ResourceName = $Resource.Name
+    $Permissions = Get-MailboxPermission -Identity $Resource.Identity | Where-Object { $_.IsInherited -eq $false -and $_.User -ne "NT AUTHORITY\SELF" } | Select-Object User, AccessRights
+
+    foreach ($Permission in $Permissions) {
+        $User = $Permission.User
+        $AccessRights = $Permission.AccessRights -join ","
+
+        # Add data to the result array
+        $Result += New-Object PSObject -property @{
+            "Resource" = $ResourceName
+            "User" = $User
+            "AccessRights" = $AccessRights
+        }
+    }
+}
+
+# Export the result to a CSV file
+$Result | Export-Csv -Path $exportPath -NoTypeInformation
+
