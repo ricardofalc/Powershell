@@ -1,14 +1,3 @@
-<#PSScriptInfo
-
-.VERSION 1.0
-
-.AUTHOR Ricardo Falchi
-
-.RELEASENOTES
-Version 1.0: Initial version.
-
-#>
-
 #Checks if required module is not installed, if not installed installs it.
 If (!(Get-module ActiveDirectory )) {
     Import-Module ActiveDirectory

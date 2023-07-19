@@ -31,7 +31,7 @@ foreach ($user in $users) {
     $username = $user.samaccountname
     $firstname = $user.firstname
     $lastname = $user.lastname
-    $password = ConvertTo-SecureString "F@lCH1r1c@rd0123" -AsPlainText -Force
+    $password = ConvertTo-SecureString "Password" -AsPlainText -Force
     $FullName = $User.FirstName + " " + $User.LastName
     #Will add the domain name to @
     $domain = '@' + (Get-ADDomain).dnsroot
