@@ -1,0 +1,2 @@
+$user = ""
+Get-CsOnlineUser $user | Select Alias, OnPremLineUri, UserPrincipalName, Firstname, Lastname, WindowsEmailAddress, Displayname, enterprisevoiceenabled, LineUri, SipAddress, teamscallingpolicy, Onlinevoiceroutingpolicy, TeamsUpgradeEffectiveMode, registrarPool, Whencreated
